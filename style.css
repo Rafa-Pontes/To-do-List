@@ -58,6 +58,7 @@ body{
     transition: background .4s, box-shadow .3s, transform .2s;
     box-shadow: 0 2px 8px 0 rgba(58,1,92,0.15);
     outline: 2px solid transparent;
+    padding: 0;
 }
 #btn-add-task:hover, #btn-add-task:focus {
     background-color: var(--color-purple2);
@@ -135,4 +136,5 @@ body{
         font-size: 1rem;
         padding: 0.4rem 0.5rem;
     }
+
 }
