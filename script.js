@@ -43,6 +43,19 @@ function LoadTasks(){
         </svg></button> </li>`;
     }
 }
+
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Delete') {
+    if (confirm('Tem certeza que deseja apagar TODAS as tarefas?')) {
+        localStorage.setItem(localStoragekey, '[]');
+        removeItem();
+        LoadTasks();
+    }
+  }
+});
+
+
 function removeItem(index){
     let values = JSON.parse(localStorage.getItem(localStoragekey) || "[]");
     values.splice(index, 1);
