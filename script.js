@@ -5,6 +5,14 @@ function validateIfExistsNewTask(newTask){
     let exists = values.find(item => item.task === newTask);
     return !exists;
 }
+
+document.getElementById('input-new-task').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Impede o comportamento padrão do Enter (como submeter um formulário)
+        document.getElementById('btn-add-task').click();
+    }
+});
+
 document.querySelector('#btn-add-task').addEventListener('click' , function() {
     let inputField = document.getElementById('input-new-task');
     inputField.style.border = '';
